@@ -1,0 +1,611 @@
+<html><head>
+    <title>TWC113 - Progresso [ V2 Learn More] </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="http://creativepreview.wideout.com/TWC/TWC113/mobile/300x250/style.css" rel="stylesheet">
+<style>
+#container{position:fixed;width:300px;height: 250px;overflow-y: hidden; overflow-x: hidden; background-color: white; }
+#bg{position:fixed; top: 0px; left: 0px; opacity:0; -webkit-transition:top .8s ease-out,opacity .8s}
+</style>
+</head>
+<body> 
+    <div style="display:none">lineItemID = %eaid! || creativeID = %ecid!</div>
+    <div id="csAd">
+	<div id="standardContainer" style="cursor: pointer; position: absolute; margin: 0px; top: 0px; display: block;">
+	    <div id="container" class="">
+		
+		<div id="bgMask"><div id="bg"></div></div>
+		<div id="frame4">
+			<div id="logo2"></div>
+			<div id="soupSeason"></div>
+			<div id="cta"></div>
+		</div>
+		<div id="frame1" class="initial"></div>		
+		<div id="frame2"></div>
+		<div id="frame3">
+			<div id="oneF3"></div>
+			<div id="twoF3"></div>
+			<div id="threeF3"></div>
+		</div>
+		<div id="logo"></div>	
+		<div id="soupImg"></div> 
+	    </div>
+	<img src="http://ad.doubleclick.net/ad/N7676.2106.WEATHERCHANNEL1/B8208420.110233713;sz=1x1;ord=%%CACHEBUSTER%%?" border="0" style="position: absolute; display: none;"></div>
+    </div>
+    
+<script type="text/javascript">
+	/*<![CDATA[*/
+var testenv=false; // should always be false
+	if (!window.location.origin)
+	window.location.origin = window.location.protocol+"//"+window.location.host;
+	if(/(wideout|localhost|file)/i.test(window.location.origin)) testenv=true;
+	var csAd = {};
+	csAd.config = {
+    adId: "csAd",
+    width: 300,
+    height: 250,
+    dir: "http://creativepreview.wideout.com/TWC/TWC113/mobile/300x250/", //http://creativepreview.wideout.com/TWC/TWC075/1024x66/
+    dfpClick: "%%CLICK_URL_UNESC%%",
+    isTest: testenv,
+    data: {},
+	    phase: [{
+	        type: "features",method: "loadJQuery",isOn: false
+	    }, {
+	        type: "features",method: "getPixelRatio",isOn: true
+	    }, {
+	        type: "adapter",method: "init",isOn: true
+	    }, {
+	        type: "app",method: "init",isOn: true
+	    }]
+	};
+	csAd.d = {
+	    imgWidth: csAd.config.width,
+	    imgHeight: csAd.config.height,
+	    offset: 0,
+	    img: "backup1",
+	    alt: "progresso",
+	    extUrl: "",
+	    clickthruURL: ""
+	};
+	csAd.ids = {
+		creative: "%ecid!",
+		lineItem: "%eaid!",
+		loc: "%%PATTERN:zip%%",
+		key: "e88c94dc-a740-102c-bafd-001321203584",
+		data: ""
+	};
+
+	
+	var isMobile = {
+		Android: function() {
+			return navigator.userAgent.match(/Android/i);
+		},
+		BlackBerry: function() {
+			return navigator.userAgent.match(/BlackBerry/i);},
+		iOS: function() {
+			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		},
+		Opera: function() {
+			return navigator.userAgent.match(/Opera Mini/i);
+		},
+		Windows: function() {
+			return navigator.userAgent.match(/IEMobile/i);
+		},
+		any: function() {
+			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		}
+	};
+	
+
+	//-----trackings retina and non retina 
+	if (isMobile.Android()) {
+	    //android
+	    if(window.devicePixelRatio >1) {
+		csAd.tracking = {
+		    pixel: "http://ad.doubleclick.net/ad/N7676.2106.WEATHERCHANNEL1/B8208420.110235016;sz=1x1;ord=%%CACHEBUSTER%%?",
+		    click: "http://ad.doubleclick.net/ddm/clk/284246650;110235016;r"
+		};
+		console.log('retina');
+	    } else {
+		csAd.tracking = {
+		    pixel: "http://ad.doubleclick.net/ad/N7676.2106.WEATHERCHANNEL1/B8208420.110235016;sz=1x1;ord=%%CACHEBUSTER%%?",
+		    click: "http://ad.doubleclick.net/ddm/clk/284246650;110235016;r"
+		};
+		console.log('non-retina');
+	    }
+	}else{
+	    //iOs
+	    if(window.devicePixelRatio >1) {
+		csAd.tracking = {
+		    pixel: "http://ad.doubleclick.net/ad/N7676.2106.WEATHERCHANNEL1/B8208420.110233713;sz=1x1;ord=%%CACHEBUSTER%%?",
+		    click: "http://ad.doubleclick.net/ddm/clk/284246650;110233713;t"
+		};
+		console.log('retina');
+	    } else {
+		csAd.tracking = {
+		    pixel: "http://ad.doubleclick.net/ad/N7676.2106.WEATHERCHANNEL1/B8208420.110233713;sz=1x1;ord=%%CACHEBUSTER%%?",
+		    click: "http://ad.doubleclick.net/ddm/clk/284246650;110233713;t"
+		};
+		console.log('non-retina');
+	    }
+	
+	}
+
+
+	
+	csAd.vars = {
+	    clickTag: encodeURIComponent("[]")
+	};
+	csAd.errors = [];
+	
+	
+	csAd.ad = {
+		methodCount: 0,
+		init: function() {
+		csAd.ad.setUrl();
+		csAd.ad.nextMethod()
+		},
+		setUrl: function() {
+		if (csAd.config.isTest) {
+			csAd.d.clickthruURL = csAd.tracking.click
+		} else {
+			csAd.d.clickthruURL = csAd.config.dfpClick + csAd.tracking.click
+		}
+		},
+		openUrl: function() {
+		window.open(csAd.d.clickthruURL, "_blank")
+		},
+		nextMethod: function(b) {
+		b = typeof b !== "undefined" ? b : 0;
+		var a = csAd.ad.methodCount + b;
+		csAd.ad.methodCount = a;
+		if (csAd.ad.methodCount < csAd.config.phase.length) {if (csAd.config.phase[a].isOn) {csAd[csAd.config.phase[a].type][csAd.config.phase[a].method]()} else {csAd.ad.nextMethod(1)}} else {csWriteCreative()}
+		}
+	};
+		
+	csAd.features = {
+		timer: false,
+		jQuerySet: false,
+		pixelRatio: 1,
+		loadJQuery: function() {
+		if (typeof(jQuery) == "undefined") {} else {csAd.ad.nextMethod(1)}
+		},
+		getPixelRatio: function() {
+		if (window.devicePixelRatio >1) {
+			csAd.config.pixelRatio = 2;
+			csAd.d.imgWidth = (csAd.config.width * 2);
+			csAd.d.imgHeight = (csAd.config.height * 2);
+		}
+		csAd.ad.nextMethod(1)
+		}
+	};
+	
+	csAd.adapter = {
+		testLoc: "10001",
+		data: {},
+		dataCheck: 0,
+		dataLocs: [],
+		init: function() {
+		csAd.adapter.checkLocId()
+		},
+		checkLocId: function() {
+		console.log('checklocid')
+		console.log(csAd.config.isTest);
+		try {
+			if (csAd.config.isTest) {
+				csAd.config.dfpClick = "";
+				if (parent.testProps) {
+					csAd.adapter.dataLocs[0] = parent.testProps.zip
+				} else {
+					csAd.adapter.dataLocs[0] = csAd.adapter.testLoc
+				}
+			} else {
+				csAd.adapter.dataLocs[0] = csAd.ids.loc.split(":")[0];
+				csAd.adapter.dataLocs[0] = csAd.adapter.dataLocs[0].split("$")[0]
+			}
+			csAd.adapter.loadMobData()
+		} catch (a) {
+			console.log("checkLocId_csWriteDefault "+ a.name + " - " + a.message)
+			csWriteDefault("csInit: " + a.name + " - " + a.message)
+		}
+		},
+		loadMobData: function() {
+		//var a = "http://wxdata.weather.com/wxdata/mobile/mobagg/" + csAd.adapter.dataLocs[0] + ".js?key=" + csAd.ids.key + "&cb=csAd.adapter.saveMobData";
+		var a = "http://myckeez.byethost22.com/TWC/10001.js";
+		var b = document.createElement("script");
+		b.setAttribute("type", "text/javascript");
+		b.setAttribute("src", a);
+		document.body.appendChild(b);
+		function go1(){
+			csAd.adapter.dataCheck = setTimeout(function() {
+			if (csAd.adapter.data.length != csAd.adapter.dataLocs.length) {
+				//alert("csAd.adapter.csDataFail");
+				csAd.adapter.csDataFail()
+			}
+			}, 3000)
+		}
+		go1();
+		},
+		saveMobData: function(a) {
+		clearTimeout(csAd.adapter.dataCheck);
+		csAd.adapter.data = a;
+		if (csAd.adapter.data.length == csAd.adapter.dataLocs.length) {
+			csSetVars()
+		} else {
+			console.log("saveMobData_csWriteDefault ")
+			csWriteDefault("csDataSave: ds2 error")
+		}
+		},
+		initComplet: function() {
+		csAd.ad.nextMethod(1)
+		},
+		csDataFail: function() {
+		clearTimeout(csAd.dataCheck);
+		csAd.dataCheck = "failed";
+		console.log("csDataFail_csWriteDefault ")
+		csWriteDefault("csDataFail: ds2 timeout")
+		}
+	};
+	
+	function csSetVars() {          
+		var a = (5 / 9) * (csAd.adapter.data[0].HiradObservation.temp - 32);
+		var zipCodeValid = /^\d{5}(?:[-\s]\d{4})?$/;
+		
+		if(csAd.adapter.dataLocs[0].match(zipCodeValid)){
+			csAd.vars.city = csAd.adapter.data[0].Location.city;
+			
+		}else{
+			csAd.vars.city = "ATLANTA";
+		}
+		
+		csAd.vars.wxIcon = initAdCond(csAd.adapter.data[0].HiradObservation.wxIcon).b;
+		csAd.vars.humid = csAd.adapter.data[0].HiradObservation.humid;
+		
+		csAd.vars.temp = csAd.adapter.data[0].HiradObservation.temp;
+		if (parent.testProps) {
+		console.log('testprops')
+		//csAd.vars.temp = csAd.adapter.data[0].HiradObservation.temp;
+		csAd.vars.temp = parent.testProps.temp;
+		csAd.vars.wxIcon = initAdCond(parent.testProps.wxIcon).b
+		csAd.vars.humid = parent.testProps.humid
+
+		
+		}
+		
+		//console.log(csAd.vars.wxIcon+"xxxx"+parent.testProps.wxIcon);
+		getWeather(csAd.vars.wxIcon);
+		
+		
+		csAd.vars.locID = csAd.adapter.dataLocs[0];
+		csAd.vars.csDir = csAd.config.dir;
+		csAd.adapter.initComplet();
+	}
+
+	csAd.app = {
+    expandURL: csAd.config.dir + "index_expand.html",
+    init: function() {
+	csAd.app.loadAdmob()
+    },
+    loadAdmob: function() {
+	var b = "http://media.admob.com/api/v1/google_mobile_app_ads.js";
+	var a = document.createElement("script");
+	a.setAttribute("type", "text/javascript");
+	a.setAttribute("src", b);
+	document.body.appendChild(a);
+	csAd.app.initComplet()
+    },
+    initComplet: function() {
+	csAd.ad.nextMethod(1)
+    },
+    openUrl: function() {
+	admob.opener.openUrl(csAd.d.clickthruURL)
+    },
+    openExpand: function() {
+	var a=encodeURIComponent(csAd.d.clickthruURL);
+	var b=encodeURIComponent(csAd.tracking.pixel);
+	admob.opener.openOverlay(csAd.app.expandURL+"?clickThru="+a+"&pixel="+b,'l')
+    }
+	};
+	window.onload=csAd.ad.init();
+    
+	function initAdCond(a) {
+	var b;
+	switch (a) {
+	    case "0":b = {i: "0", b: "Stormy", d: "Tornado", t: "na"};break;
+	    case "1":b = {i: "1",b: "Stormy",d: "Tropical Storm",t: "na"};break;
+	    case "2":b = {i: "2",b: "Stormy",d: "Hurricane",t: "na"};break;
+	    case "3":b = {i: "3",b: "Stormy",d: "Strong Thunderstorms",t: "na"};break;
+	    case "4":b = {i: "4",b: "Stormy",d: "Thunderstorms",t: "na"};break;
+	    case "5":b = {i: "5",b: "Snow",d: "Rain and Snow",t: "na"};break;
+	    case "6":b = {i: "6",b: "Snow",d: "Rain and Sleet",t: "na"};break;
+	    case "7":b = {i: "7",b: "Snow",d: "Wintry Mix",t: "na"};break;
+	    case "8":b = {i: "8",b: "Snow",d: "Freezing Drizzle",t: "na"};break;
+	    case "9":b = {i: "9",b: "Rainy",d: "Drizzle",t: "na"};break;
+	    case "10":b = {i: "10",b: "Rainy",d: "Freezing Rain",t: "na"};break;
+	    case "11":b = {i: "11",b: "Rainy",d: "Showers",t: "na"};break;
+	    case "12":b = {i: "12",b: "Rainy",d: "Rain",t: "na"};break;
+	    case "13":b = {i: "13",b: "Snow",d: "Flurries",t: "na"};break;
+	    case "14":b = {i: "14",b: "Snow",d: "Snow Showers",t: "na"};break;
+	    case "15":b = {i: "15",b: "Snow",d: "Blowing Snow",t: "na"};break;
+	    case "16":b = {i: "16",b: "Snow",d: "Snow",t: "na"};break;
+	    case "17":b = {i: "17",b: "Snow",d: "Hail",t: "na"};break;
+	    case "18":b = {i: "18",b: "Snow",d: "Sleet",t: "na"};break;
+	    case "19":b = {i: "19",b: "Foggy",d: "Dust",t: "na"};break;
+	    case "20":b = {i: "20",b: "Foggy",d: "Fog",t: "na"};break;
+	    case "21":b = {i: "21",b: "Foggy",d: "Haze",t: "na"};break;
+	    case "22":b = {i: "22",b: "Foggy",d: "Smoke",t: "na"};break;
+	    case "23":b = {i: "23",b: "Windy",d: "Breezy",t: "na"};break;
+	    case "24":b = {i: "24",b: "Windy",d: "Windy",t: "na"};break;
+	    case "25":b = {i: "25",b: "Snow",d: "Frigid",t: "na"};break;
+	    case "26":b = {i: "26",b: "Cloudy",d: "Cloudy",t: "na"};break;
+	    case "27":b = {i: "27",b: "Cloudy",d: "Mostly Cloudy",t: "night"};break;
+	    case "28":b = {i: "28",b: "Cloudy",d: "Mostly Cloudy",t: "day"};break;
+	    case "29":b = {i: "29",b: "Cloudy",d: "Partly Cloudy",t: "night"};break;
+	    case "30":b = {i: "30",b: "Cloudy",d: "Partly Cloudy",t: "day"};break;
+	    case "31":b = {i: "31",b: "Clear",d: "Clear",t: "night"};break;
+	    case "32":b = {i: "32",b: "Sunny",d: "Sunny",t: "day"};break;
+	    case "33":b = {i: "33",b: "Clear",d: "Mostly Clear",t: "night"};break;
+	    case "34":b = {i: "34",b: "Sunny",d: "Mostly Sunny",t: "day"};break;
+	    case "35":b = {i: "35",b: "Snow",d: "Mixed Rain/Hail",t: "na"};break;
+	    case "36":b = {i: "36",b: "Sunny",d: "Hot",t: "day"};break;
+	    case "37":b = {i: "37",b: "Stormy",d: "Isolated Thunderstorms",t: "day"};break;
+	    case "38":b = {i: "38",b: "Stormy",d: "Scattered Thunderstorms",t: "day"};break;
+	    case "39":b = {i: "39", b: "Rainy", d: "Scattered Showers", t: "day"};break;
+	    case "40":b = {i: "40", b: "Rainy", d: "Heavy Rain", t: "na"};break;
+	    case "41":b = {i: "41",b: "Snow",d: "Scattered Snow Showers",t: "na"};break;
+	    case "42":b = {i: "42",b: "Snow",d: "Heavy Snow",t: "na"};break;
+	    case "43":b = {i: "43",b: "Snow",d: "Blizzard",t: "na"};break;
+	    case "44":b = {i: "44",b: "Default",d: "Not Available",t: "na"};break;
+	    case "45":b = {i: "45",b: "Rainy",d: "Scattered Showers",t: "night"};break;
+	    case "46":b = {i: "46",b: "Snow",d: "Scattered Snow Showers",t: "night"};break;
+	    case "47":b = {i: "47",b: "Stormy",d: "Scattered Thunderstorms",t: "night"};break;
+	    default:b = {i: "na",b: "Default",d: "Not Available",t: "na"};break
+	 }
+	return b
+	}
+
+	function getWeather(wCondition) {
+	trace("---"+ wCondition);
+	//wCondition = "Sunny";
+		_cta = "learn";
+	    switch(wCondition) {
+		case 'Sunny':
+			weather = "sunny";
+		break;
+		case 'Rainy':
+			weather = "rainy";
+		break;
+		case 'Snow':
+			weather = "snow";
+		break;
+		case 'Cloudy':
+			weather = "cloudy";
+		break;
+		case 'Clear':
+			weather = "clear";
+		break;
+		case 'Windy':
+			weather = "windy";
+		break;
+	    case 'Stormy':
+			weather = "stormy";
+		break;
+	    case 'Foggy':
+			weather = "foggy";
+		break;
+		case 'Default':
+			weather = "default";
+	    	default:
+		break;
+	    }
+	}
+
+	function csWriteCreative() {
+	    if (csAd.d.img != "") {
+	        var b = document.getElementById("standardContainer");
+		b.style.cursor = "pointer";
+	        b.style.position = "absolute";
+	        b.style.width = csAd.config.width;
+	        b.style.height = csAd.config.height;
+	        b.style.margin = "0";
+	        b.style.top = "0px";
+	        b.style.display = "block";
+	        b.onclick = csAd.app.openUrl;
+	        if (csAd.tracking.pixel !== "") {
+	            var a = document.createElement("img");
+	            a.src = csAd.tracking.pixel;
+	            a.style.position = "absolute";
+	            a.style.display = "none";
+	            a.border = 0;
+	            b.appendChild(a)
+	        }
+		appendThis();
+	    }
+	}
+	function csWriteDefault(c) {
+	    if (csAd.d.img != "") {
+	        var d = document.getElementById(csAd.config.adId);
+	        d.style.cursor = "pointer";
+	        d.onclick = csAd.ad.openUrl;
+	        while (d.hasChildNodes()) {
+	            d.removeChild(d.firstChild)
+	        }
+	        if (csAd.tracking.pixel !== "") {
+	            var a = document.createElement("img");
+	            a.src = csAd.tracking.pixel;
+	            a.style.position = "absolute";
+	            a.style.display = "none";
+	            a.border = 0;
+	            d.appendChild(a)
+	        }
+	        var b = document.createElement("img");
+	        b.src = csAd.config.dir + "images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight+"/"+ csAd.d.img  + ".jpg";
+	        b.style.position = "absolute";
+	        b.height = csAd.config.height;
+	        b.width = csAd.config.width;
+	        b.alt = csAd.d.alt;
+	        b.border = 0;
+	        b.style.left = csAd.d.offset;
+	        d.appendChild(b);
+	        csAd.errors.push(c)
+	    }
+	}
+	//getWeather('Clear');
+	//appendThis();
+	function appendThis(){
+	trace(weather); 
+	var images = new Array(
+	csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/bg.jpg",
+	csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/logo.png",
+	csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/" + weather + "F1.png",
+	csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/" + weather + "F2.png",
+	//csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/F3.png",
+	csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/soup.png",
+	csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/soupseason.png",
+	csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/"+ _cta +".png",
+	csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/logo2.png",
+	csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/txtOneF3.png",
+	csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/txtTwoF3.png",
+	csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/txtThreeF3.png"
+	);
+	
+	var loadedImage = 0;
+	for(var i=0; i<=images.length-1; i++) {
+		imageObj = new Image();
+		imageObj.src=images[i];
+		imageObj.addEventListener("load",iLoad,false)
+		}
+	function iLoad(){
+		loadedImage++;
+		trace(loadedImage);
+		console.log(images.length +"=="+ loadedImage);
+			if(images.length == loadedImage){
+				bg.style.background= "url('"+images[0]+"')";
+				bg.style.backgroundSize="300px 600px";bg.style.width = "300px"; bg.style.height = "600px";
+				logo.style.background= "url('"+images[1]+"')";
+				logo.style.backgroundSize="148px 76px";logo.style.width = "148px"; logo.style.height = "76px";
+				
+				frame1.style.background= "url('"+images[2]+"')";
+				if(weather == "default"){
+					frame1.className = "default";
+					frame1.style.backgroundSize="249px 69px";frame1.style.width = "249px"; frame1.style.height = "69px";
+				}else{
+					frame1.className = "initial";
+					frame1.style.backgroundSize="187px 144px";frame1.style.width = "187px"; frame1.style.height = "144px";
+				}
+				frame2.style.background= "url('"+images[3]+"')";
+				frame2.style.backgroundSize="206px 116px";frame2.style.width = "206px"; frame2.style.height = "116px";
+				//frame3.style.background= "url('"+images[4]+"')";
+				//frame3.style.backgroundSize="179px 114px";frame3.style.width = "179px"; frame3.style.height = "114px";
+				soupImg.style.background= "url('"+images[4]+"')";
+				soupImg.style.backgroundSize="265px 277px";soupImg.style.width = "265px"; soupImg.style.height = "277px";
+				soupSeason.style.background= "url('"+images[5]+"')";
+				soupSeason.style.backgroundSize="112px 11px";soupSeason.style.width = "112px"; soupSeason.style.height = "11px";
+				cta.style.background= "url('"+images[6]+"')";
+				cta.style.backgroundSize="131px 28px";cta.style.width = "131px"; cta.style.height = "28px";
+				logo2.style.background= "url('"+images[7]+"')";
+				logo2.style.backgroundSize="129px 67px";logo2.style.width = "129px"; logo2.style.height = "67px";
+				oneF3.style.background= "url('"+images[8]+"')";
+				oneF3.style.backgroundSize="179px 35px";oneF3.style.width = "179px"; oneF3.style.height = "35px";
+				twoF3.style.background= "url('"+images[9]+"')";
+				twoF3.style.backgroundSize="179px 34px";twoF3.style.width = "179px"; twoF3.style.height = "34px";
+				threeF3.style.background= "url('"+images[10]+"')";
+				threeF3.style.backgroundSize="168px 25px";threeF3.style.width = "168px";threeF3.style.height = "25px";
+				
+				startAnimation();	
+			}
+	    }
+	}
+
+	function animateEnd(){
+		setTimeout(function(){ 
+			bg.style.opacity="0"; soupImg.style.opacity="0"; frame4.style.opacity="0";
+			setTimeout(resetAnim, 500);
+		},500)
+	}
+	
+	function animate4(){ 
+	    setTimeout(function(){ 
+			soupImg.style.top = "-97px"; soupImg.style.opacity="1";
+			bg.style.top = "-280px";
+			setTimeout(animateEnd,7000) 
+	    },2000)
+	}
+	
+	function animate3(){ //frame3.style.top="0px";
+		frame3.style.opacity="1";
+	    setTimeout(function(){ 
+			oneF3.style.top="101px"; oneF3.style.opacity="1"; 
+			setTimeout(function(){ twoF3.style.top="146px"; twoF3.style.opacity="1"; 
+				setTimeout(function(){ threeF3.style.top="190px"; threeF3.style.opacity="1"; 
+					setTimeout(function(){ 
+						logo.style.top="-350px"; logo.style.opacity="0";
+						frame3.style.top="-350px"; frame3.style.opacity="0";
+						soupImg.style.top = "-97px"; soupImg.style.opacity="1";
+						bg.style.top = "-280px";
+						frame4.style.top="0px"; frame4.style.opacity="1";
+							setTimeout(function(){ 
+								bg.style.opacity = ".3"; 
+								setTimeout(function(){ bg.style.opacity = "1"; 
+								},100);
+							},100);
+						animate4();
+					},3000)
+				}, 500);
+			}, 500);
+	    },500)
+	}
+
+	function animate2(){
+	    setTimeout(function(){ 
+			frame2.style.top="101px"; frame2.style.opacity="1";	
+			setTimeout(function(){ 
+				frame2.style.top="-200px"; frame2.style.opacity="0";
+				animate3();
+			},3000)
+	    },500)
+	}
+	
+	function animate1(){
+		setTimeout(function(){
+			logo.style.top="9px";
+			frame1.style.top="98px"; frame1.style.opacity="1";
+			setTimeout(function(){					
+				frame1.style.top="-200px"; frame1.style.opacity="0";
+				animate2();
+			},3000)
+		},1000)
+	}	
+	
+	function defaultAnimate(){
+		setTimeout(function(){
+			logo.style.top="9px";
+			frame1.style.top="110px"; frame1.style.opacity="1";
+			setTimeout(function(){					
+				frame1.style.top="-200px"; frame1.style.opacity="0"; 
+				animate3();
+			},3000)
+		},1000)
+	}
+	
+	function startAnimation(){ 
+		setTimeout(function(){
+			bg.style.opacity="1";
+			setTimeout(function(){ 
+				logo.style.opacity="1";
+				trace("default: " + weather);
+				if(weather == "default"){ trace("1"); defaultAnimate(); }else{ trace("2"); animate1(); }
+			},500)
+	    },1000)		
+	}
+	
+	function resetAnim(){		
+		logo.style.top=frame1.style.top=frame2.style.top=frame3.style.top="";
+		setTimeout(function(){ oneF3.style.top=twoF3.style.top=threeF3.style.top=""; soupImg.style.top=""; bg.style.top=frame4.style.top=""; startAnimation(); }, 500);
+	}
+		
+	function trace($){ console.log(" *** " + $ ); }
+</script><script type="text/javascript" src="http://wxdata.weather.com/wxdata/mobile/mobagg/10001.js?key=e88c94dc-a740-102c-bafd-001321203584&amp;cb=csAd.adapter.saveMobData"></script>
+
+
+
+<script type="text/javascript" src="http://media.admob.com/api/v1/google_mobile_app_ads.js"></script></body></html>

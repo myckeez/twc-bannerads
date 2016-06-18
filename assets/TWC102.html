@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TWC102 - L'OREAL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<body>
+    <link href="http://creativepreview.wideout.com/TWC/TWC102/300x250/style.css" rel="stylesheet">
+    <div style="display:none">lineItemID = %eaid! || creativeID = %ecid!</div>
+    <div id="csAd">
+	<div id="standardContainer">
+	    <div id="container" class="">
+			<div id="bg1"></div>
+			<div id="bg2"></div>
+			<div id="frameA">
+				<div id="model"></div>
+				<div id="fade"></div>
+				<div id="mask1">
+					<div id="aCopy1"></div>
+					<div id="aCopy2"></div>
+					<div id="aCopy3"></div>
+					<div id="aCopy4"></div>
+					<div id="aCopy5"></div>
+				</div>
+			</div>
+			<div id="frameB">
+				<div id="mask1">
+					<div id="bCopy1"></div>
+					<div id="bCopy2"></div>
+					<div id="bCopy3"></div>
+					<div id="bCopy4"></div>
+					<div id="bCopy5"></div>
+				</div>
+			</div>
+			<div id="frameC">
+				<div id="product"></div>
+				<div id="mask1">
+					<div id="cCopy1"></div>
+					<div id="cCopy2"></div>
+				</div>
+			</div>
+			
+			<div id="frameD">
+				<div id="products"></div>
+				<div id="mask1">
+					<div id="dCopy1"></div>
+					<div id="dCopy2"></div>
+					<div id="dCopy3"></div>
+				</div>
+				<div id="cta"></div>
+			</div>
+			<div id="logo"></div>
+	    </div>
+	</div>
+    </div>
+<script type="text/javascript">
+	/*<![CDATA[*/
+var testenv=false; // should always be false
+	if (!window.location.origin)
+	window.location.origin = window.location.protocol+"//"+window.location.host;
+	if(/(wideout|localhost|file)/i.test(window.location.origin)) testenv=true;
+	var csAd = {};
+	csAd.config = {
+    adId: "csAd",
+    width: 300,
+    height: 250,
+    dir: "http://creativepreview.wideout.com/TWC/TWC102/300x250/", //http://creativepreview.wideout.com/TWC/TWC075/1024x66/
+    dfpClick: "%%CLICK_URL_UNESC%%",
+    isTest: testenv,
+    data: {},
+	    phase: [{
+	        type: "features",method: "loadJQuery",isOn: false
+	    }, {
+	        type: "features",method: "getPixelRatio",isOn: true
+	    }, {
+	        type: "adapter",method: "init",isOn: true
+	    }, {
+	        type: "app",method: "init",isOn: true
+	    }]
+	};
+	csAd.d = {
+	    imgWidth: csAd.config.width,
+	    imgHeight: csAd.config.height,
+	    offset: 0,
+	    img: "backup",
+	    alt: "L'OREAL",
+	    extUrl: "",
+	    clickthruURL: ""
+	};
+	csAd.ids = {
+		creative: "%ecid!",
+		lineItem: "%eaid!",
+		loc: "%%PATTERN:zip%%",
+		key: "e88c94dc-a740-102c-bafd-001321203584",
+		data: ""
+	};
+
+	
+	var isMobile = {
+		Android: function() {
+			return navigator.userAgent.match(/Android/i);
+		},
+		BlackBerry: function() {
+			return navigator.userAgent.match(/BlackBerry/i);},
+		iOS: function() {
+			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		},
+		Opera: function() {
+			return navigator.userAgent.match(/Opera Mini/i);
+		},
+		Windows: function() {
+			return navigator.userAgent.match(/IEMobile/i);
+		},
+		any: function() {
+			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		}
+	};
+	
+
+	csAd.tracking = {
+	    pixel: "",
+	    pixel2: "http://ad.doubleclick.net/ad/N30403.128637WEATHER/B8184163.110927493;sz=1x1;ord=%%CACHEBUSTER%%?",
+	    click: "http://ad.doubleclick.net/ddm/clk/284111352;110927493;y",
+	    pixelExp:"",
+	    clickExp:""
+	};
+
+	
+	csAd.vars = {
+	    clickTag: encodeURIComponent("[]")
+	};
+	csAd.errors = [];
+	
+	
+	csAd.ad = {
+		methodCount: 0,
+		init: function() {
+		
+		csAd.ad.nextMethod()
+		},
+		setUrl: function() {
+		if (csAd.config.isTest) {
+			csAd.d.clickthruURL = csAd.tracking.click
+		} else {
+			csAd.d.clickthruURL = csAd.config.dfpClick + csAd.tracking.click
+		}
+		},
+		openUrl: function() {
+		window.open(csAd.d.clickthruURL, "_blank")
+		},
+		nextMethod: function(b) {
+		b = typeof b !== "undefined" ? b : 0;
+		var a = csAd.ad.methodCount + b;
+		csAd.ad.methodCount = a;
+		if (csAd.ad.methodCount < csAd.config.phase.length) {if (csAd.config.phase[a].isOn) {csAd[csAd.config.phase[a].type][csAd.config.phase[a].method]()} else {csAd.ad.nextMethod(1)}} else {csWriteCreative()}
+		}
+	};
+		
+	csAd.features = {
+		timer: false,
+		jQuerySet: false,
+		pixelRatio: 1,
+		loadJQuery: function() {
+		if (typeof(jQuery) == "undefined") {} else {csAd.ad.nextMethod(1)}
+		},
+		getPixelRatio: function() {
+		if (window.devicePixelRatio >1) {
+			csAd.config.pixelRatio = 2;
+			csAd.d.imgWidth = (csAd.config.width * 2);
+			csAd.d.imgHeight = (csAd.config.height * 2);
+		}
+		csAd.ad.nextMethod(1)
+		}
+	};
+	
+	csAd.adapter = {
+		testLoc: "10001",
+		data: {},
+		dataCheck: 0,
+		dataLocs: [],
+		init: function() {
+		csAd.adapter.checkLocId()
+		},
+		checkLocId: function() {
+		console.log('checklocid')
+		console.log(csAd.config.isTest);
+		try {
+			if (csAd.config.isTest) {
+				csAd.config.dfpClick = "";
+				if (parent.testProps) {
+					csAd.adapter.dataLocs[0] = parent.testProps.zip
+				} else {
+					csAd.adapter.dataLocs[0] = csAd.adapter.testLoc
+				}
+			} else {
+				csAd.adapter.dataLocs[0] = csAd.ids.loc.split(":")[0];
+				csAd.adapter.dataLocs[0] = csAd.adapter.dataLocs[0].split("$")[0]
+			}
+			csAd.adapter.loadMobData()
+		} catch (a) {
+			console.log("checkLocId_csWriteDefault "+ a.name + " - " + a.message)
+			csWriteDefault("csInit: " + a.name + " - " + a.message)
+		}
+		},
+		loadMobData: function() {
+		//var a = "http://wxdata.weather.com/wxdata/mobile/mobagg/" + csAd.adapter.dataLocs[0] + ".js?key=" + csAd.ids.key + "&cb=csAd.adapter.saveMobData";
+		var a = "http://myckeez.byethost22.com/TWC/10001.js";
+		
+		console.log(a);
+		var b = document.createElement("script");
+		b.setAttribute("type", "text/javascript");
+		b.setAttribute("src", a);
+		document.body.appendChild(b);
+		function go1(){
+			csAd.adapter.dataCheck = setTimeout(function() {
+			if (csAd.adapter.data.length != csAd.adapter.dataLocs.length) {
+				//alert("csAd.adapter.csDataFail");
+				csAd.adapter.csDataFail()
+			}
+			}, 3000)
+		}
+		go1();
+		},
+		saveMobData: function(a) {
+		clearTimeout(csAd.adapter.dataCheck);
+		csAd.adapter.data = a;
+		if (csAd.adapter.data.length == csAd.adapter.dataLocs.length) {
+			csSetVars()
+		} else {
+			console.log("saveMobData_csWriteDefault ")
+			csWriteDefault("csDataSave: ds2 error")
+		}
+		},
+		initComplet: function() {
+		csAd.ad.nextMethod(1)
+		},
+		csDataFail: function() {
+		clearTimeout(csAd.dataCheck);
+		csAd.dataCheck = "failed";
+		console.log("csDataFail_csWriteDefault ")
+		csWriteDefault("csDataFail: ds2 timeout")
+		}
+	};
+
+	function csSetVars() {          
+		var a = (5 / 9) * (csAd.adapter.data[0].HiradObservation.temp - 32);
+		var zipCodeValid = /^\d{5}(?:[-\s]\d{4})?$/;
+		
+		if(csAd.adapter.dataLocs[0].match(zipCodeValid)){
+			csAd.vars.city = csAd.adapter.data[0].Location.city;
+			
+		}else{
+			csAd.vars.city = "ATLANTA";
+		}
+		
+		csAd.vars.wxIcon = initAdCond(csAd.adapter.data[0].HiradObservation.wxIcon).b;
+		csAd.vars.humid = csAd.adapter.data[0].HiradObservation.humid;
+		
+		csAd.vars.temp = csAd.adapter.data[0].HiradObservation.temp;
+		if (parent.testProps) {
+		console.log('testprops')
+		//csAd.vars.temp = csAd.adapter.data[0].HiradObservation.temp;
+		csAd.vars.temp = parent.testProps.temp;
+		csAd.vars.wxIcon = initAdCond(parent.testProps.wxIcon).b
+		csAd.vars.humid = parent.testProps.humid
+		}
+		
+		//console.log(csAd.vars.wxIcon+"xxxx"+parent.testProps.wxIcon);
+		getWeather(csAd.vars.wxIcon);
+		
+		
+		csAd.ad.setUrl();
+		csAd.vars.locID = csAd.adapter.dataLocs[0];
+		csAd.vars.csDir = csAd.config.dir;
+		csAd.adapter.initComplet();
+	}
+
+	csAd.app = {
+    expandURL: csAd.config.dir + "index_expand.html",
+    init: function() {
+	csAd.app.loadAdmob()
+    },
+    loadAdmob: function() {
+	var b = "http://media.admob.com/api/v1/google_mobile_app_ads.js";
+	var a = document.createElement("script");
+	a.setAttribute("type", "text/javascript");
+	a.setAttribute("src", b);
+	document.body.appendChild(a);
+	csAd.app.initComplet()
+    },
+    initComplet: function() {
+	csAd.ad.nextMethod(1)
+    },
+    openUrl: function() {
+	admob.opener.openUrl(csAd.d.clickthruURL)
+    },
+    openExpand: function() {
+	var a=encodeURIComponent(csAd.d.clickthruURL);
+	var b=encodeURIComponent(csAd.tracking.pixel);
+	admob.opener.openOverlay(csAd.app.expandURL+"?clickThru="+a+"&pixel="+b,'l')
+    }
+	};
+	window.onload=csAd.ad.init();
+    
+	function getWeather(wCondition) {
+		if(csAd.vars.humid >= 60){
+		    
+		    csAd.tracking.click="http://ad.doubleclick.net/ddm/clk/284111352;109982884;l";
+		    csAd.tracking.pixel="http://ad.doubleclick.net/ad/N30403.128637WEATHER/B8184163.109982884;sz=1x1;ord=%%CACHEBUSTER%%?";
+		trace("HUMID: " + csAd.vars.humid);
+			prodType = "SLEEK"; Txt1 = "IN"; Txt2 = "HIGH"; Txt3 = "HUMIDITY";
+			topTwo = "128px"; widthTwo = "26px"; heightTwo = "29px"; bgSizeTwo = "26px 29px";
+			topThree = "159px"; widthThree = "67px"; heightThree = "30px"; bgSizeThree = "67px 30px";
+			topFour = "192px"; widthFour = "143px"; heightFour = "30px"; bgSizeFour = "143px 30px";
+			cCopy1H="13px"; cCopy1W="144px"; cCopy1BG="144px 13px";
+		}else{
+		trace("!HUMID: " + csAd.vars.humid);
+			switch(wCondition) {
+			case 'Storm':
+			    csAd.tracking.click="http://ad.doubleclick.net/ddm/clk/284111352;109983198;k";
+			    csAd.tracking.pixel="http://ad.doubleclick.net/ad/N30403.128637WEATHER/B8184163.109983198;sz=1x1;ord=%%CACHEBUSTER%%?";
+				prodType = "SLEEK"; Txt1 = "DEFY"; Txt2 = "THE"; Txt3 = "STORM";
+					topTwo = "128px"; widthTwo = "71px"; heightTwo = "28px"; bgSizeTwo = "71px 28px";
+					topThree = "159px"; widthThree = "52px"; heightThree = "30px"; bgSizeThree = "52px 30px";
+					topFour = "191px"; widthFour = "104px"; heightFour = "31px"; bgSizeFour = "104px 31px";	
+				cCopy1H="13px"; cCopy1W="144px"; cCopy1BG="144px 13px";
+				break;
+			case 'Rain':
+			    csAd.tracking.click="http://ad.doubleclick.net/ddm/clk/284111352;109983198;k";
+			    csAd.tracking.pixel="http://ad.doubleclick.net/ad/N30403.128637WEATHER/B8184163.109983198;sz=1x1;ord=%%CACHEBUSTER%%?";
+				prodType = "SLEEK"; Txt1 = "IN"; Txt2 = "THE"; Txt3 = "RAIN";
+					topTwo = "128px"; widthTwo = "26px"; heightTwo = "29px"; bgSizeTwo = "26px 29px";
+					topThree = "159px"; widthThree = "52px"; heightThree = "30px"; bgSizeThree = "52px 30px";
+					topFour = "191px"; widthFour = "74px"; heightFour = "30px"; bgSizeFour = "74px 30px";	
+				cCopy1H="13px"; cCopy1W="144px"; cCopy1BG="144px 13px";
+				break;
+			case 'Cloudy':
+			    csAd.tracking.click="http://ad.doubleclick.net/ddm/clk/284110995;109982887;a";
+			    csAd.tracking.pixel="http://ad.doubleclick.net/ad/N30403.128637WEATHER/B8184163.109982887;sz=1x1;ord=%%CACHEBUSTER%%?";
+				prodType = "BOOST";	Txt1 = "WHEN"; Txt2 = "ITS"; Txt3 = "CLOUDY";
+					topTwo = "97px"; widthTwo = "72px"; heightTwo = "26px"; bgSizeTwo = "72px 26px";
+					topThree = "126px"; widthThree = "43px"; heightThree = "27px"; bgSizeThree = "43px 27px";
+					topFour = "156px"; widthFour = "101px"; heightFour = "27px"; bgSizeFour = "101px 27px";			
+				cCopy1H="12px"; cCopy1W="143px"; cCopy1BG="143px 12px";
+				break;
+			case 'Night':
+			    csAd.tracking.click="http://ad.doubleclick.net/ddm/clk/284110995;109982886;z";
+			    csAd.tracking.pixel="http://ad.doubleclick.net/ad/N30403.128637WEATHER/B8184163.109982886;sz=1x1;ord=%%CACHEBUSTER%%?";
+				prodType = "BOOST"; Txt1 = "ALL"; Txt2 = "NIGHT"; Txt3 = "LONG";
+				topTwo = "97px"; widthTwo = "44px"; heightTwo = "27px"; bgSizeTwo = "44px 27px"
+				topThree = "126px"; widthThree = "77px"; heightThree = "28px"; bgSizeThree = "77px 28px";
+				topFour = "156px"; widthFour = "74px"; heightFour = "27px"; bgSizeFour = "74px 27px";
+				cCopy1H="12px"; cCopy1W="143px"; cCopy1BG="143px 12px";
+				break;
+			case 'Sunny':
+			    csAd.tracking.click="http://ad.doubleclick.net/ddm/clk/284111352;109982885;m";
+			    csAd.tracking.pixel="http://ad.doubleclick.net/ad/N30403.128637WEATHER/B8184163.109982885;sz=1x1;ord=%%CACHEBUSTER%%?";
+				prodType = "SLEEK"; Txt1 = "IN"; Txt2 = "THE"; Txt3 = "SUN";
+					topTwo = "128px"; widthTwo = "26px"; heightTwo = "29px"; bgSizeTwo = "26px 29px";
+					topThree = "160px"; widthThree = "52px"; heightThree = "30px"; bgSizeThree = "52px 30px";
+					topFour = "193px"; widthFour = "64px"; heightFour = "30px"; bgSizeFour = "64px 30px";	
+				cCopy1H="13px"; cCopy1W="144px"; cCopy1BG="144px 13px";
+			break;
+			default:
+			    csAd.tracking.click="http://ad.doubleclick.net/ddm/clk/284111352;110927493;y";
+			    csAd.tracking.pixel="http://ad.doubleclick.net/ad/N30403.128637WEATHER/B8184163.109982887;sz=1x1;ord=%%CACHEBUSTER%%?";
+				prodType = "BOOST";	Txt1 = "WHEN"; Txt2 = "ITS"; Txt3 = "CLOUDY";
+					topTwo = "97px"; widthTwo = "72px"; heightTwo = "26px"; bgSizeTwo = "72px 26px";
+					topThree = "126px"; widthThree = "43px"; heightThree = "27px"; bgSizeThree = "43px 27px";
+					topFour = "156px"; widthFour = "101px"; heightFour = "27px"; bgSizeFour = "101px 27px";			
+				cCopy1H="12px"; cCopy1W="143px"; cCopy1BG="143px 12px";				
+				break;
+			}
+		}
+	}	
+	
+	function initAdCond(a) {
+	var b;
+	switch (a) {
+		case "0":b = {i: "0", b: "Storm", d: "Tornado", t: "na"};break;
+		case "1":b = {i: "1",b: "Storm",d: "Tropical Storm",t: "na"};break;
+		case "2":b = {i: "2",b: "Storm",d: "Hurricane",t: "na"};break;
+		case "3":b = {i: "3",b: "Storm",d: "Strong Thunderstorms",t: "na"};break;
+		case "4":b = {i: "4",b: "Storm",d: "Thunderstorms",t: "na"};break;
+		case "5":b = {i: "5",b: "Storm",d: "Rain and Snow",t: "na"};break;
+		case "6":b = {i: "6",b: "Storm",d: "Rain and Sleet",t: "na"};break;
+		case "7":b = {i: "7",b: "Storm",d: "Wintry Mix",t: "na"};break;
+		case "8":b = {i: "8",b: "Rain",d: "Freezing Drizzle",t: "na"};break;
+		case "9":b = {i: "9",b: "Rain",d: "Drizzle",t: "na"};break;
+		case "10":b = {i: "10",b: "Rain",d: "Freezing Rain",t: "na"};break;
+		case "11":b = {i: "11",b: "Rain",d: "Showers",t: "na"};break;
+		case "12":b = {i: "12",b: "Rainy",d: "Rain",t: "na"};break;
+		case "13":b = {i: "13",b: "Storm",d: "Flurries",t: "na"};break;
+		case "14":b = {i: "14",b: "Storm",d: "Snow Showers",t: "na"};break;
+		case "15":b = {i: "15",b: "Storm",d: "Blowing Snow",t: "na"};break;
+		case "16":b = {i: "16",b: "Storm",d: "Snow",t: "na"};break;
+		case "17":b = {i: "17",b: "Storm",d: "Hail",t: "na"};break;
+		case "18":b = {i: "18",b: "Storm",d: "Sleet",t: "na"};break;
+		case "19":b = {i: "19",b: "Cloudy",d: "Dust",t: "na"};break;
+		case "20":b = {i: "20",b: "Cloudy",d: "Fog",t: "na"};break;
+		case "21":b = {i: "21",b: "Cloudy",d: "Haze",t: "na"};break;
+		case "22":b = {i: "22",b: "Cloudy",d: "Smoke",t: "na"};break;
+		case "23":b = {i: "23",b: "Cloudy",d: "Breezy",t: "na"};break;
+		case "24":b = {i: "24",b: "Cloudy",d: "Windy",t: "na"};break;
+		case "25":b = {i: "25",b: "Storm",d: "Frigid",t: "na"};break;
+		case "26":b = {i: "26",b: "Cloudy",d: "Cloudy",t: "na"};break;
+		case "27":b = {i: "27",b: "Cloudy",d: "Mostly Cloudy",t: "night"};break;
+		case "28":b = {i: "28",b: "Cloudy",d: "Mostly Cloudy",t: "day"};break;
+		case "29":b = {i: "29",b: "Cloudy",d: "Partly Cloudy",t: "night"};break;
+		case "30":b = {i: "30",b: "Cloudy",d: "Partly Cloudy",t: "day"};break;
+		case "31":b = {i: "31",b: "Night",d: "Clear",t: "night"};break;
+		case "32":b = {i: "32",b: "Sunny",d: "Sunny",t: "day"};break;
+		case "33":b = {i: "33",b: "Night",d: "Mostly Clear",t: "night"};break;
+		case "34":b = {i: "34",b: "Sunny",d: "Mostly Sunny",t: "day"};break;
+		case "35":b = {i: "35",b: "Rain",d: "Mixed Rain/Hail",t: "na"};break;
+		case "36":b = {i: "36",b: "Sunny",d: "Hot",t: "day"};break;
+		case "37":b = {i: "37",b: "Storm",d: "Isolated Thunderstorms",t: "day"};break;
+		case "38":b = {i: "38",b: "Storm",d: "Scattered Thunderstorms",t: "day"};break;
+		case "39":b = {i: "39", b: "Rain", d: "Scattered Showers", t: "day"};break;
+		case "40":b = {i: "40", b: "Rain", d: "Heavy Rain", t: "na"};break;
+		case "41":b = {i: "41",b: "Storm",d: "Scattered Snow Showers",t: "na"};break;
+		case "42":b = {i: "42",b: "Storm",d: "Heavy Snow",t: "na"};break;
+		case "43":b = {i: "43",b: "Storm",d: "Blizzard",t: "na"};break;
+		case "44":b = {i: "44",b: "NA",d: "Not Available",t: "na"};break;
+		case "45":b = {i: "45",b: "Cloudy",d: "Scattered Showers",t: "night"};break;
+		case "46":b = {i: "46",b: "Storm",d: "Scattered Snow Showers",t: "night"};break;
+		case "47":b = {i: "47",b: "Storm",d: "Scattered Thunderstorms",t: "night"};break;
+		default:b = {i: "na",b: "Default",d: "Not Available",t: "na"};break
+		}
+	return b
+	}
+
+	function csWriteCreative() {
+	    if (csAd.d.img != "") {
+	        var b = document.getElementById("standardContainer");
+		b.style.cursor = "pointer";
+	        b.style.position = "absolute";
+	        b.style.width = csAd.config.width;
+	        b.style.height = csAd.config.height;
+	        b.style.margin = "0";
+	        b.style.top = "0px";
+	        b.style.display = "block";
+	        b.onclick = csAd.app.openUrl;
+	        if (csAd.tracking.pixel !== "") {
+	            var a = document.createElement("img");
+	            a.src = csAd.tracking.pixel;
+	            a.style.position = "absolute";
+	            a.style.display = "none";
+	            a.border = 0;
+	            b.appendChild(a)
+	        }
+		if (csAd.tracking.pixel2 !== "") {
+	            var e= document.createElement("img");
+	            e.src = csAd.tracking.pixel2;
+	            e.style.position = "absolute";
+	            e.style.display = "none";
+	            e.border = 0;
+	            b.appendChild(e)
+	        }
+		appendThis();
+	    }
+	}
+	function csWriteDefault(c) {
+	    if (csAd.d.img != "") {
+	        var d = document.getElementById(csAd.config.adId);
+	        d.style.cursor = "pointer";
+csAd.ad.setUrl();
+	        d.onclick = csAd.ad.openUrl;
+	        while (d.hasChildNodes()) {
+	            d.removeChild(d.firstChild)
+	        }
+	        if (csAd.tracking.pixel !== "") {
+	            var a = document.createElement("img");
+	            a.src = csAd.tracking.pixel;
+	            a.style.position = "absolute";
+	            a.style.display = "none";
+	            a.border = 0;
+	            d.appendChild(a)
+	        }
+		if (csAd.tracking.pixel2 !== "") {
+	            var e= document.createElement("img");
+	            e.src = csAd.tracking.pixel2;
+	            e.style.position = "absolute";
+	            e.style.display = "none";
+	            e.border = 0;
+	            d.appendChild(e)
+	        }
+	        var b = document.createElement("img");
+	        b.src = csAd.config.dir + "images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight+"/"+ csAd.d.img  + ".jpg";
+	        b.style.position = "absolute";
+	        b.height = csAd.config.height;
+	        b.width = csAd.config.width;
+	        b.alt = csAd.d.alt;
+	        b.border = 0;
+	        b.style.left = csAd.d.offset;
+	        d.appendChild(b);
+	        csAd.errors.push(c)
+	    }
+	}
+	
+	function appendThis(){		
+		trace("appendThis+Function: "+prodType);
+		var images = new Array(
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/LOGO.png",		
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/BE.png",
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/SLEEK_s.png",
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/"+Txt1+".png",
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/"+Txt2+".png",
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/"+Txt3+".png",			
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/" + prodType+"_fade.png",
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/" + prodType+"_model.png",	
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/"+ prodType+"_fcCopy1.png", // _fcCopy1
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/"+ prodType+"_fcCopy2.png", // _fcCopy2
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/"+ prodType+"_fcCopy3.png", // _fcCopy3
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/"+ prodType+"_fcCopy4.png", // _fcCopy4
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/"+ prodType+"_frameB.png",
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/"+prodType+".png",
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/" + prodType+"_Product_Large.png",			
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/" + prodType +"_Products.png",
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/" + prodType +"_STYLE_IT.png",
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/" + prodType +"_CHANGE_IT.png",
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/" + prodType +"_OWN_IT.png",
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/BUYNOW.png",			
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/BOOST_IT.png",		
+			csAd.config.dir+"images/"+ csAd.d.imgWidth + "x" + csAd.d.imgHeight +"/GO.png"// _fcCopy5
+	    );
+	    
+		function frameAtxt(){
+		//csAd.vars.prodType = p;
+		trace("frameAtxt  " + prodType);
+			if(prodType == "SLEEK"){ 
+			trace(prodType+"_IT - TXT1");						
+				aCopy1.style.background= "url('"+images[1]+"')"; aCopy1.style.top= "66px"; 
+				aCopy1.style.width = "32px"; aCopy1.style.height = "28px"; aCopy1.style.backgroundSize = "32px 28px";                    
+				aCopy2.style.background= "url('"+images[2]+"')"; aCopy2.style.top= "96px"; 
+				aCopy2.style.width = "87px"; aCopy2.style.height = "29px"; aCopy2.style.backgroundSize = "87px 29px";               
+				aCopy3.style.background= "url('"+images[3]+"')"; aCopy3.style.top=topTwo; 
+				aCopy3.style.width=widthTwo; aCopy3.style.height=heightTwo; aCopy3.style.backgroundSize=bgSizeTwo;                  
+				aCopy4.style.background= "url('"+images[4]+"')"; aCopy4.style.top=topThree; 
+				aCopy4.style.width=widthThree; aCopy4.style.height=heightThree; aCopy4.style.backgroundSize=bgSizeThree;                   
+				aCopy5.style.background= "url('"+images[5]+"')"; aCopy5.style.top=topFour; 
+				aCopy5.style.width=widthFour; aCopy5.style.height=heightFour; aCopy5.style.backgroundSize=bgSizeFour;
+			}else if(prodType == "BOOST"){
+			trace(prodType+"_IT - TXT1");
+				aCopy1.style.background= "url('"+images[20]+"')"; aCopy1.style.top= "66px";
+				aCopy1.style.width = "120px"; aCopy1.style.height = "28px"; aCopy1.style.backgroundSize = "120px 28px"; 
+				aCopy2.style.background= "url('"+images[3]+"')"; aCopy2.style.top=topTwo;
+				aCopy2.style.width=widthTwo; aCopy2.style.height=heightTwo; aCopy2.style.backgroundSize=bgSizeTwo;     
+				aCopy3.style.background= "url('"+images[4]+"')"; aCopy3.style.top=topThree;
+				aCopy3.style.width=widthThree; aCopy3.style.height=heightThree; aCopy3.style.backgroundSize=bgSizeThree;      
+				aCopy4.style.background= "url('"+images[5]+"')"; aCopy4.style.top=topFour;
+				aCopy4.style.width=widthFour; aCopy4.style.height=heightFour; aCopy4.style.backgroundSize=bgSizeFour; 
+			}
+		}
+		function frameBtxt(){
+			//csAd.vars.prodType = p;
+			trace("frameBtxt " + prodType);
+			if(prodType == "SLEEK"){ 
+			trace(prodType+"_IT - TXT2");						
+				bCopy1.style.background= "url('"+images[8]+"')";  bCopy1.style.top= "64px";
+				bCopy1.style.width = "65px"; bCopy1.style.height = "31px"; bCopy1.style.backgroundSize = "65px 31px";                    
+				bCopy2.style.background= "url('"+images[9]+"')";  bCopy2.style.top= "97px";
+				bCopy2.style.width = "116px"; bCopy2.style.height = "31px"; bCopy2.style.backgroundSize = "116px 31px";                   
+				bCopy3.style.background= "url('"+images[10]+"')";  bCopy3.style.top= "131px";
+				bCopy3.style.width = "54px"; bCopy3.style.height = "30px"; bCopy3.style.backgroundSize = "54px 30px";                   
+				bCopy4.style.background= "url('"+images[11]+"')";  bCopy4.style.top= "163px";
+				bCopy4.style.width = "72px"; bCopy4.style.height = "31px"; bCopy4.style.backgroundSize = "72px 31px"; 
+			}else if(prodType == "BOOST"){
+			trace(prodType+"_IT - TXT2");
+				bCopy1.style.background= "url('"+images[8]+"')"; bCopy1.style.top= "61px";
+				bCopy1.style.width = "59px"; bCopy1.style.height = "28px"; bCopy1.style.backgroundSize = "59px 28px";                    
+				bCopy2.style.background= "url('"+images[9]+"')"; bCopy2.style.top= "92px";
+				bCopy2.style.width = "62px"; bCopy2.style.height = "28px"; bCopy2.style.backgroundSize = "62px 28px";                   
+				bCopy3.style.background= "url('"+images[10]+"')"; bCopy3.style.top= "123px";
+				bCopy3.style.width = "63px"; bCopy3.style.height = "28px"; bCopy3.style.backgroundSize = "63px 28px";                   
+				bCopy4.style.background= "url('"+images[11]+"')"; bCopy4.style.top= "153px";
+				bCopy4.style.width = "51px"; bCopy4.style.height = "28px"; bCopy4.style.backgroundSize = "51px 28px"; 
+				bCopy5.style.background= "url('"+images[21]+"')"; bCopy5.style.top= "183px";
+				bCopy5.style.width = "48px"; bCopy5.style.height = "28px"; bCopy5.style.backgroundSize = "48px 28px"; 
+			}
+		}
+		
+		logo.style.background= "url('"+images[0]+"')";
+		logo.style.width = "66px"; logo.style.height = "26px"; logo.style.backgroundSize = "66px 26px";  
+	    var loadedImage = 0;
+	    for(var i=0; i<=images.length-1; i++) {	imageObj = new Image();	imageObj.src=images[i];	imageObj.addEventListener("load",iLoad,false) }
+	    function iLoad(){
+                loadedImage++;
+                console.log(images.length +"=="+ loadedImage);
+                if(images.length == loadedImage){   
+					//logo.style.background= "url('"+images[0]+"')";
+					//logo.style.width = "66px"; logo.style.height = "26px"; logo.style.backgroundSize = "66px 26px";  
+					//FrameA txt
+					frameAtxt();
+					//======
+					fade.style.background= "url('"+images[6]+"')";
+					fade.style.width = "300px"; fade.style.height = "250px"; fade.style.backgroundSize = "300px 250px";
+					model.style.background= "url('"+images[7]+"')";
+					model.style.width = "300px"; model.style.height = "250px"; model.style.backgroundSize = "300px 250px";
+					//======
+					//FrameB txt
+					frameBtxt();
+					//======
+					cCopy1.style.background= "url('"+images[12]+"')";
+					cCopy1.style.width = cCopy1W; cCopy1.style.height = cCopy1H; cCopy1.style.backgroundSize = cCopy1BG; 
+					cCopy2.style.background= "url('"+images[13]+"')";
+					cCopy2.style.width = "116px"; cCopy2.style.height = "29px"; cCopy2.style.backgroundSize = "116px 29px";                   
+					product.style.background= "url('"+images[14]+"')";
+					product.style.width = "300px"; product.style.height = "250px"; product.style.backgroundSize = "300px 250px";                    
+					products.style.background= "url('"+images[15]+"')";
+					products.style.width = "195px"; products.style.height = "193px"; products.style.backgroundSize = "195px 193px"; 
+					dCopy1.style.background= "url('"+images[16]+"')";
+					dCopy1.style.width = "98px"; dCopy1.style.height = "24px"; dCopy1.style.backgroundSize = "98px 24px";                    
+					dCopy2.style.background= "url('"+images[17]+"')";
+					dCopy2.style.width = "122px"; dCopy2.style.height = "24px"; dCopy2.style.backgroundSize = "122px 24px";                   
+					dCopy3.style.background= "url('"+images[18]+"')";
+					dCopy3.style.width = "83px"; dCopy3.style.height = "24px"; dCopy3.style.backgroundSize = "83px 24px";                   
+					cta.style.background= "url('"+images[19]+"')";
+					cta.style.width = "49px"; cta.style.height = "17px"; cta.style.backgroundSize = "49px 17px";    
+					
+                setTimeout(animateThis, 200);
+            }
+	    }
+	}
+
+	
+	function resetAnim(){
+		aCopy1.style.left=aCopy2.style.left=aCopy3.style.left=aCopy4.style.left=aCopy5.style.left="";
+		bCopy1.style.left=bCopy2.style.left=bCopy3.style.left=bCopy4.style.left=bCopy5.style.left="";
+		cCopy1.style.left=cCopy2.style.left="";
+		model.style.left="";
+		setTimeout(function(){
+			products.style.opacity="0";
+			setTimeout(function(){
+				cta.style.top="270px";
+				cta.style.opacity="0";	
+				setTimeout(function(){	
+					dCopy3.style.left="130px";
+					dCopy3.style.opacity="0";
+					setTimeout(function(){
+						dCopy2.style.left="130px";	
+						dCopy2.style.opacity="0";	
+						setTimeout(function(){
+							dCopy1.style.left="130px";	
+							dCopy1.style.opacity="0";
+							logo.style.opacity = "0";									
+								setTimeout(animateThis, 200);
+						},200);
+					},200);
+				},200);
+			},200);
+		},100);
+	}
+	function anim4_in(){
+		setTimeout(function(){
+			products.style.opacity="1";
+			setTimeout(function(){
+				dCopy1.style.left="0px";	
+				dCopy1.style.opacity="1";	
+				setTimeout(function(){
+					dCopy2.style.left="0px";	
+					dCopy2.style.opacity="1";	
+					setTimeout(function(){
+						dCopy3.style.left="0px";
+						dCopy3.style.opacity="1";	
+						setTimeout(function(){
+							cta.style.top="187px";
+							cta.style.opacity="1";
+								setTimeout(function(){resetAnim();},7300);								
+						},500);
+					},300);
+				},300);
+			},300);
+		},200);
+	}
+	function anim3_out(){
+		setTimeout(function(){	
+			//product.style.left="0px";
+			product.style.opacity="0";
+			setTimeout(function(){
+				cCopy2.style.left="156px";
+				cCopy2.style.opacity="0";	
+				setTimeout(function(){
+					cCopy1.style.left="128px";	
+					cCopy1.style.opacity="0";					
+						setTimeout(anim4_in,300);
+				},300);
+			},300);
+		},100);
+	}	
+	function anim3_in(){
+		trace("anim3_in");
+		setTimeout(function(){
+			trace("product");
+			//product.style.left="0px";
+			product.style.opacity="1";
+			setTimeout(function(){
+				trace("anim3_in");
+				cCopy1.style.left="0px";	
+				cCopy1.style.opacity="1";	
+				setTimeout(function(){
+					cCopy2.style.left="0px";
+					cCopy2.style.opacity="1";	
+						setTimeout(anim3_out,1300);			
+				},300);
+			},300);
+		},300);
+	}
+        
+	function anim2_out(){
+		setTimeout(function(){
+			if(prodType == "BOOST"){ trace(prodType+"_IT - ANIMATION2 OUT ");
+			//bCopy5.style.left="211px";
+			bCopy5.style.opacity="0";
+			}
+			setTimeout(function(){
+				model.style.opacity="0";
+				setTimeout(function(){
+					//bCopy4.style.left="200px";
+					bCopy4.style.opacity="0";
+					setTimeout(function(){
+						//bCopy3.style.left="216px";
+						bCopy3.style.opacity="0";
+						setTimeout(function(){
+							//bCopy2.style.left="176px";
+							bCopy2.style.opacity="0";
+							setTimeout(function(){
+								//bCopy1.style.left="211px";
+								bCopy1.style.opacity="0";
+								fade.style.opacity = "0";
+								bg2.style.opacity = "0";								
+									setTimeout(anim3_in,300);
+							},300);
+						},300);
+					},300);
+				},300);
+			},400);
+		},200);
+    }
+    
+    function anim2_in(){
+		setTimeout(function(){
+			bCopy1.style.left="0px";	
+			bCopy1.style.opacity="1";
+			setTimeout(function(){
+				bCopy2.style.left="0px";
+				bCopy2.style.opacity="1";	
+				setTimeout(function(){
+					bCopy3.style.left="0px";
+					bCopy3.style.opacity="1";
+					setTimeout(function(){
+						bCopy4.style.left="0px";
+						bCopy4.style.opacity="1";	
+						setTimeout(function(){						
+							if(prodType == "BOOST"){
+								trace(prodType+"_IT - ANIMATION2 IN ");
+								bCopy5.style.left="0px";
+								bCopy5.style.opacity="1";								
+							}
+								setTimeout(anim2_out,1300);
+						},300);
+					},300);
+				},300);
+			},300);
+		},200);
+		
+    }
+	function anim1_out(){	
+		setTimeout(function(){
+			//aCopy5.style.left="100px";
+			aCopy5.style.opacity="0";
+			//aCopy5.style.webkitFilter="drop-shadow(12px 12px 7px rgba(0,0,0,0.5))";
+			setTimeout(function(){
+				//aCopy4.style.left="100px";
+				aCopy4.style.opacity="0";
+				setTimeout(function(){
+					//aCopy3.style.left="100px";
+					aCopy3.style.opacity="0";
+					setTimeout(function(){
+						//aCopy2.style.left="100px";
+						aCopy2.style.opacity="0";
+						setTimeout(function(){
+							//aCopy1.style.left="100px";
+							aCopy1.style.opacity="0";							
+							setTimeout(anim2_in,300);																
+						},200);
+					},200);
+				},200);
+			},200);
+		},200);
+	}
+	function anim1_in(){	
+		dCopy1.style.left=dCopy2.style.left=dCopy3.style.left="";
+		setTimeout(function(){
+			bg2.style.opacity = "1";
+			frameA.style.opacity = "1";
+			fade.style.opacity = "1";
+			setTimeout(function(){
+				//logo.style.top = "26px";
+				logo.style.opacity = "1";
+				setTimeout(function(){
+					model.style.left="0px";
+					model.style.opacity="1";					
+					setTimeout(function(){
+						aCopy1.style.left="0px";	
+						aCopy1.style.opacity="1";		
+						setTimeout(function(){
+							aCopy2.style.left="0px";
+							aCopy2.style.opacity="1";	
+							setTimeout(function(){
+								aCopy3.style.left="0px";
+								aCopy3.style.opacity="1";
+								setTimeout(function(){
+									aCopy4.style.left="0px";
+									aCopy4.style.opacity="1";	
+									setTimeout(function(){
+										aCopy5.style.left="0px";
+										aCopy5.style.opacity="1";										
+											setTimeout(anim1_out,1300);	
+									},300);
+								},300);
+							},300);
+						},300);
+					},300);
+				},500);
+			},300);
+		},300);
+	}
+		
+	function animateThis(){ 
+        setTimeout(anim1_in,500);
+	}
+	
+	function trace($){ console.log(" *** " + $ ); }
+</script>
+
+</body>
+</html>
